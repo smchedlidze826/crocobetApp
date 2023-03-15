@@ -1,0 +1,15 @@
+{
+    "side_bar":{
+        "live":"LIVE",
+        "sport":"SPORT",
+        "slots":"SLOTS",
+        "casino":"CASINO"
+    },
+    "header":{
+        "top":"Top Slots",
+        "favourites":"Favourites",
+        "new":"New Games",
+        "buy":"Buy Bonus",
+        "history":"History"
+    }
+}

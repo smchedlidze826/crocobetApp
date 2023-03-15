@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+.container{
+    background: $page_bg;
+
+    .content{
+        margin-left: 80px;
+    }
+}

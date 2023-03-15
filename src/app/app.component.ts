@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { CustomIconsService } from './core/services/custom-icons/custom-icons.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'crocobetApp';
+
+  constructor(
+    private translate: TranslateService,
+    private customIconsService: CustomIconsService
+    ) {
+    translate.setDefaultLang('en');
+    customIconsService.registerIcons();
+  }
 }

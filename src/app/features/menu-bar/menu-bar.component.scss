@@ -1,0 +1,59 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.container {
+  position: relative;
+  width: 78px;
+
+  .tabs_wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background: $menu_bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      padding: 10px;
+    }
+
+    .tabs {
+      &_list {
+          list-style: none;
+        &--item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-top: 40px;
+          
+          &:hover {
+            img {
+              filter: brightness(0) invert(1);
+            }
+            p {
+              color: $text_primary;
+            }
+            &::before{
+                content: '';
+                @include hover-border($hover_gr, 3px);
+                left: -3px;
+            }
+          }
+
+          img {
+            width: 29px;
+            height: 30px;
+            margin: auto;
+          }
+          p {
+            margin-top: 10px;
+            color: $text_secondary;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@mixin hover-border($color, $size){
+    height: 60px;
+    width: $size;
+    position: absolute;
+    border-radius: $size;
+    border-right: $size solid $color;
+}
