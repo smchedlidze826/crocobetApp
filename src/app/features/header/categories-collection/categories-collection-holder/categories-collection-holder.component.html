@@ -1,0 +1,7 @@
+<div class="container">
+    <ul class="container_list">
+        <li class="container_list--item" *ngFor="let provider of providersList" (click)="loadSlotsByProvider.emit(provider.provider)">
+            {{provider.name | uppercase}}
+        </li>
+    </ul>
+</div>

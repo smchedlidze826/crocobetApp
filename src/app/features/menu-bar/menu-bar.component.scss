@@ -21,13 +21,14 @@
 
     .tabs {
       &_list {
-          list-style: none;
+        cursor: pointer;
+        list-style: none;
         &--item {
           display: flex;
           flex-direction: column;
           justify-content: center;
           margin-top: 40px;
-          
+
           &:hover {
             img {
               filter: brightness(0) invert(1);
@@ -35,10 +36,8 @@
             p {
               color: $text_primary;
             }
-            &::before{
-                content: '';
-                @include hover-border($hover_gr, 3px);
-                left: -3px;
+            &::before {
+              @include hover-border-right($hover_gr, 3px);
             }
           }
 
@@ -51,6 +50,7 @@
             margin-top: 10px;
             color: $text_secondary;
             text-align: center;
+            font-size: $text-sm;
           }
         }
       }

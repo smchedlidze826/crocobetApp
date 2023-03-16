@@ -1,0 +1,22 @@
+@import "variables.scss";
+
+.container {
+  &_list {
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    max-width: calc(100vw - 200px);
+
+    &--item {
+      height: $slots-header-height;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: $text_primary;
+      list-style: none;
+      margin-left: 20px;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "variables.scss";
+
+.container {
+  height: $slots-header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background: $header-dark;
+  position: relative;
+
+  .holder-container {
+    position: absolute;
+    top: 0;
+  }
+
+  .btn-container {
+    background: $header-dark;
+    background: none;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+
+    .btn {
+      cursor: pointer;
+      border: none;
+      background: none;
+      outline: none;
+      display: flex;
+      align-items: center;
+      color: $text_primary;
+      height: $slots-header-height;
+
+      .mat-icon {
+        width: 12px;
+        height: 8px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

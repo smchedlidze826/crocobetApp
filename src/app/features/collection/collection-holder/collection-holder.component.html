@@ -1,0 +1,10 @@
+<div class="holder_container">
+    <div class="slots_wrapper" *ngFor="let game of games">
+        <img class="slots_wrapper--img" [src]="game.image" alt="game.name">
+        <p class="slots_wrapper--title">
+            {{game.name}}
+        </p>
+        <span class="slots_wrapper--tag" *ngIf="game.tags.includes('new')">{{'common.new' | translate}}</span>
+        <button class="slots_wrapper--btn">{{'common.play' | translate}}</button>
+    </div>
+</div>

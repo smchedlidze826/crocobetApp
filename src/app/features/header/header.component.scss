@@ -1,5 +1,60 @@
-@import 'variables.scss';
+@import "mixins.scss";
+@import "variables.scss";
 
 .container {
   height: 106px;
+
+  .tabs_wrapper {
+    .tabs {
+      display: flex;
+      padding-top: 8px;
+      &_list {
+        cursor: pointer;
+        position: relative;
+        padding: 10px 20px;
+        display: flex;
+        align-items: flex-start;
+        list-style: none;
+
+        &.selected {
+          span {
+            .counter {
+              color: $hover_gr;
+            }
+          }
+        }
+
+        &:hover {
+          &::before {
+            @include hover-border-bottom($hover_gr, 3px);
+            width: calc(100% - 16px);
+          }
+        }
+
+        .mat-icon {
+          width: 16px;
+          height: 18px;
+        }
+
+        .mat-icon {
+          margin-right: 10px;
+        }
+
+        &--item {
+          font-size: $text-sm;
+          color: $text_primary;
+          position: relative;
+
+          .counter {
+            position: absolute;
+            width: 16px;
+            top: -14px;
+            right: -16px;
+            font-size: $text-xs;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
 }

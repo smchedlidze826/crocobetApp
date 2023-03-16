@@ -1,7 +1,19 @@
-@mixin hover-border($color, $size){
-    height: 60px;
-    width: $size;
-    position: absolute;
-    border-radius: $size;
-    border-right: $size solid $color;
+@mixin hover-border-right($color, $size) {
+  content: "";
+  height: 60px;
+  width: $size;
+  position: absolute;
+  left: -#{$size};
+  border-radius: $size;
+  border-right: $size solid $color;
+}
+
+@mixin hover-border-bottom($color, $size) {
+  content: "";
+  position: absolute;
+  border-radius: $size;
+  border-top: $size solid $color;
+  bottom: -#{$size};
+  height: $size;
+  left: 16px;
 }

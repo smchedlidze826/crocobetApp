@@ -1,15 +1,21 @@
 {
-    "side_bar":{
-        "live":"LIVE",
-        "sport":"SPORT",
-        "slots":"SLOTS",
-        "casino":"CASINO"
+    "common": {
+        "all": "ALL",
+        "new": "NEW",
+        "play":"PLAY"
     },
-    "header":{
-        "top":"Top Slots",
-        "favourites":"Favourites",
-        "new":"New Games",
-        "buy":"Buy Bonus",
-        "history":"History"
+    "side_bar": {
+        "live": "LIVE",
+        "sport": "SPORT",
+        "slots": "SLOTS",
+        "casino": "CASINO"
+    },
+    "header": {
+        "top": "Top Slots",
+        "favourites": "Favourites",
+        "new": "New Games",
+        "buy": "Buy Bonus",
+        "history": "History",
+        "see_more": "See More"
     }
 }

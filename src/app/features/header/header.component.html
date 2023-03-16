@@ -1,26 +1,40 @@
 <div class="container">
     <div class="tabs_wrapper">
         <ul class="tabs">
-            <li class="tabs_list">
-                <img src="https://crocobet.com/assets/icons/features/slots/filters/top-slots.svg" alt="top">
-                <span class="tabs_list--item">{{'header.top' | translate}}</span>
+            <li class="tabs_list" [ngClass]="{'selected' : topCounter.selected  }" (click)="onSelect(topCounter.category)">
+                <mat-icon svgIcon="top-slots"></mat-icon>
+                <span class="tabs_list--item">{{'header.top' | translate}}
+                    <span class="counter">{{topCounter.counter}}</span>
+                </span>
             </li>
-            <li class="tabs_list">
-                <img src="https://crocobet.com/assets/icons/features/slots/filters/top-slots.svg" alt="top">
-                <span class="tabs_list--item">{{'header.favourites' | translate}}</span>
+            <li class="tabs_list" [ngClass]="{'selected' : favouriteCounter.selected  }" (click)="onSelect(favouriteCounter.category)">
+                <mat-icon svgIcon="star"></mat-icon>
+                <span class="tabs_list--item">{{'header.favourites' | translate}}
+                    <span class="counter">{{favouriteCounter.counter}}</span>
+                </span>
             </li>
-            <li class="tabs_list">
-                <img src="https://crocobet.com/assets/icons/features/slots/filters/new-games.svg" alt="top">
-                <span class="tabs_list--item">{{'header.new' | translate}}</span>
+            <li class="tabs_list" [ngClass]="{'selected' : newCounter.selected  }" (click)="onSelect(newCounter.category)">
+                <mat-icon svgIcon="new-games"></mat-icon>
+                <span class="tabs_list--item">{{'header.new' | translate}}
+                    <span class="counter">{{newCounter.counter}}</span>
+                </span>
             </li>
-            <li class="tabs_list">
-                <img src="https://crocobet.com/assets/icons/features/slots/filters/buy-bonus.svg" alt="top">
-                <span class="tabs_list--item">{{'header.buy' | translate}}</span>
+            <li class="tabs_list" [ngClass]="{'selected' : buyCounter.selected  }" (click)="onSelect(buyCounter.category)">
+                <mat-icon svgIcon="buy"></mat-icon>
+                <span class="tabs_list--item">{{'header.buy' | translate}}
+                    <span class="counter">{{buyCounter.counter}}</span>
+                </span>
             </li>
-            <li class="tabs_list">
-                <img src="https://crocobet.com/assets/icons/features/slots/filters/top-slots.svg" alt="top">
-                <span class="tabs_list--item">{{'header.history' | translate}}</span>
+            <li class="tabs_list" [ngClass]="{'selected' : favouriteCounter.selected  }" (click)="onSelect(favouriteCounter.category)">
+                <mat-icon svgIcon="history"></mat-icon>
+                <span class="tabs_list--item">{{'header.history' | translate}}
+                    <span class="counter">{{historyCounter.counter}}</span>
+                </span>
             </li>
         </ul>
+    </div>
+
+    <div class="slots-wrapper">
+        <app-categories-collection (loadSlotsByProvider)="loadSlotsByProvider($event)"></app-categories-collection>
     </div>
 </div>
