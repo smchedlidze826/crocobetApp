@@ -16,6 +16,7 @@ import { MainPageComponent } from "./main-page.component";
 import { CategoriesCollectionComponent } from "src/app/features/header/categories-collection/categories-collection.component";
 import { SlotsService } from "src/app/core/services/slots/slots.service";
 import { CategoriesCollectionHolderComponent } from "src/app/features/header/categories-collection/categories-collection-holder/categories-collection-holder.component";
+import { SlotsSharedService } from "./slots-shared.service";
 
 
 @NgModule({
@@ -37,6 +38,6 @@ import { CategoriesCollectionHolderComponent } from "src/app/features/header/cat
         MatIconModule,
         RouterModule.forChild([{ path: '', component: MainPageComponent }]),
     ],
-    providers:[SlotsService]
+    providers:[SlotsService, SlotsSharedService]
 })
 export class MainPageModule { }

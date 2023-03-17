@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Categories } from 'src/app/core/enums/categories';
 import { CategoriesCounter } from 'src/app/core/intefaces/categories-counter';
+import { SlotsSharedService } from 'src/app/pages/main/slots-shared.service';
 
 @Component({
   selector: 'app-header',
@@ -22,6 +23,8 @@ export class HeaderComponent implements OnInit {
   public newCounter!: CategoriesCounter;
   public historyCounter!: CategoriesCounter;
 
+  constructor(private slotSharedService: SlotsSharedService) { }
+
   ngOnInit(): void {
     this.topCounter = this.categoriesCounter.find(({ category }) => category === Categories.Top) ?? { category: Categories.Top, counter: 25, selected: true };
     this.favouriteCounter = this.categoriesCounter.find(({ category }) => category === Categories.Favourites) ?? { category: Categories.Favourites, counter: 125, selected: false };
@@ -38,7 +41,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public loadSlotsByProvider(provider: string): void {
-    //  this.slotsService.getSlotsByProvider(providerName).pipe(tap(e=>console.log(e)))
+    this.slotSharedService.updateProvider(provider);
   }
 
 }
